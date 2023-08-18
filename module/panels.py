@@ -13,4 +13,11 @@ class PrintsPanel(Panel):
         return context.object is not None
 
     def draw(self, context):
-        pass
+        layout = self.layout
+        props = context.scene.my_props
+
+        dimension_box = layout.box()
+        dimension_box.label(text="Printer dimensions [mm]")
+        dimension_box.prop(props, "max_x")
+        dimension_box.prop(props, "max_y")
+        dimension_box.prop(props, "max_z")
