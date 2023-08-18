@@ -1,5 +1,7 @@
 from bpy.utils import register_class, unregister_class
 
+from .panels import PrintsPanel
+
 bl_info = {
     "name": "My Test Add-on",
     "blender": (2, 80, 0),
@@ -7,7 +9,7 @@ bl_info = {
 }
 
 classes = [
-
+    PrintsPanel
 ]
 
 
