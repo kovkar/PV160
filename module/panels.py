@@ -16,8 +16,17 @@ class PrintsPanel(Panel):
         layout = self.layout
         props = context.scene.my_props
 
+        stl_box = layout.box()
+        stl_box.label(text="Path to .stl file:")
+        stl_box.prop(props, "stl_path")
+        stl_box.prop(props, "print_position")
+
+        path_box = layout.box()
+        path_box.label(text="Path to .gcode file:")
+        path_box.prop(props, "gcode_path")
+
         dimension_box = layout.box()
-        dimension_box.label(text="Printer dimensions [mm]")
-        dimension_box.prop(props, "max_x")
-        dimension_box.prop(props, "max_y")
-        dimension_box.prop(props, "max_z")
+        dimension_box.prop(props, "printer_size")
+        dimension_box.prop(props, "show_printer_frame")
+
+
