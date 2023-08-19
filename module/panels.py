@@ -10,7 +10,7 @@ class PrintsPanel(Panel):
 
     @classmethod
     def poll(self, context):
-        return context.object is not None
+        return True
 
     def draw(self, context):
         layout = self.layout

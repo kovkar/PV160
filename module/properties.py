@@ -1,10 +1,11 @@
 from bpy.props import IntVectorProperty, StringProperty, BoolProperty
 from bpy.types import PropertyGroup
 
+from .functions import toggle_printer_frame
+
 
 #  NOTE: Changes made for blender 2.80 version:
 #  Properties are annotations now, assigned with : not =
-
 
 class PrinterProperties(PropertyGroup):
     printer_size: IntVectorProperty(name="Printer dimensions [mm]",
@@ -28,4 +29,6 @@ class PrinterProperties(PropertyGroup):
                              description="Select path to .stl model from which gcode was created",
                              subtype="FILE_PATH")
 
-    show_printer_frame: BoolProperty(name="Show printer frame")
+    show_printer_frame: BoolProperty(name="Show printer frame",
+                                     update=toggle_printer_frame,
+                                     default=False)
