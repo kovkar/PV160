@@ -29,4 +29,7 @@ class PrintsPanel(Panel):
         dimension_box.prop(props, "printer_size")
         dimension_box.prop(props, "show_printer_frame")
 
+        row = layout.row()
+        row.operator('com.gcode', text='Calculate')
+
 
