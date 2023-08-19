@@ -15,7 +15,7 @@ class PrinterProperties(PropertyGroup):
                                     subtype="XYZ_LENGTH",
                                     min=50)
 
-    print_position: IntVectorProperty(name="Print offset [mm]",
+    print_offset: IntVectorProperty(name="Print offset [mm]",
                                       description="Offset of printed .stl from center of the heatbed"
                                                   "(needed to place model into space correctly).",
                                       default=(0, 0, 0),

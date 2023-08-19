@@ -19,7 +19,8 @@ class PrintsPanel(Panel):
         stl_box = layout.box()
         stl_box.label(text="Path to .stl file:")
         stl_box.prop(props, "stl_path")
-        stl_box.prop(props, "print_position")
+        stl_box.prop(props, "print_offset")
+        stl_box.operator('com.spawn', text="Spawn .stl")
 
         path_box = layout.box()
         path_box.label(text="Path to .gcode file:")

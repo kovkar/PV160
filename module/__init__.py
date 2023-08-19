@@ -5,7 +5,7 @@ from bpy.props import PointerProperty
 
 from .panels import PrintsPanel
 from .properties import PrinterProperties
-from .operators import CalculateFromGcodeOperator
+from .operators import CalculateFromGcodeOperator, SpawnModelOperator
 
 bl_info = {
     "name": "My Test Add-on",
@@ -15,6 +15,7 @@ bl_info = {
 
 classes = [
     CalculateFromGcodeOperator,
+    SpawnModelOperator,
     PrinterProperties,
     PrintsPanel
 ]
