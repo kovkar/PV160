@@ -8,7 +8,7 @@ from .properties import PrinterProperties
 from .operators import CalculateFromGcodeOperator, SpawnModelOperator
 
 bl_info = {
-    "name": "printcom: CoM of 3D prints visualizer",
+    "name": "[printcom] 3D prints CoM visualization",
     "description": "Calculates CoM of 3D prints from .gcode",
     "author": "Karol Kováč",
     "version": (2, 0),
