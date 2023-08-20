@@ -8,6 +8,7 @@ from .functions import com_from_gcode
 class CalculateFromGcodeOperator(Operator):
     bl_idname = "com.gcode"
     bl_label = ""
+    bl_description = "Calculates CoM from provided G-code"
 
     @classmethod
     def poll(cls, context):
@@ -28,12 +29,18 @@ class CalculateFromGcodeOperator(Operator):
 class SpawnModelOperator(Operator):
     bl_idname = "com.spawn"
     bl_label = ""
+    bl_description = "Imports stl model with offset"
 
     @classmethod
     def poll(cls, context):
         return True
 
     def execute(self, context):
+        if bpy.data.objects.get('print.stl') is not None:                       # if som stl already spawned
+            bpy.ops.object.select_all(action='DESELECT')                        # delete it
+            bpy.data.objects['print.stl'].select_set(True)
+            bpy.ops.object.delete()
+
         x, y, z = bpy.context.scene.my_props.print_offset
         bpy.ops.import_mesh.stl(filepath=bpy.context.scene.my_props.stl_path)   # import stl
         obj = bpy.context.active_object                                         # imported stl to variable

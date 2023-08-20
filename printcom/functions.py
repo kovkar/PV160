@@ -92,8 +92,8 @@ def delete_printer_frame():
 def update_frame(self, context):
     if bpy.context.scene.my_props.show_printer_frame:               # if frame exists
         frame = bpy.data.objects['frame']                           # get object
-        x, y, z = bpy.context.scene.my_props.printer_size          # get dimensions
-        frame.dimensions = x / 1000, y / 1000, z / 1000  # update size
+        x, y, z = bpy.context.scene.my_props.printer_size           # get dimensions
+        frame.dimensions = x / 1000, y / 1000, z / 1000             # update size
 
 
 # update function for print_offset property
