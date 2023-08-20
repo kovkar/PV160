@@ -86,3 +86,19 @@ def delete_printer_frame():
     bpy.ops.object.select_all(action='DESELECT')    # deselect all objects
     obj.select_set(True)                            # select it
     bpy.ops.object.delete()                         # delete it
+
+
+# update function for printer_size property
+def update_frame(self, context):
+    if bpy.context.scene.my_props.show_printer_frame:               # if frame exists
+        frame = bpy.data.objects['frame']                           # get object
+        x, y, z = bpy.context.scene.my_props.printer_size          # get dimensions
+        frame.dimensions = x / 1000, y / 1000, z / 1000  # update size
+
+
+# update function for print_offset property
+def update_offset(self, context):
+    if bpy.data.objects.get('print.stl') is not None:               # if .stl is spawned
+        stl = bpy.data.objects['print.stl']                         # get object
+        x, y, z = bpy.context.scene.my_props.print_offset           # get offset
+        stl.location = x / 1000, y / 1000, z / 1000                 # update location + conversion mm -> m
