@@ -8,9 +8,15 @@ from .properties import PrinterProperties
 from .operators import CalculateFromGcodeOperator, SpawnModelOperator
 
 bl_info = {
-    "name": "My Test Add-on",
-    "blender": (2, 80, 0),
-    "category": "Object",
+    "name": "printcom: CoM of 3D prints visualizer",
+    "description": "Calculates CoM of 3D prints from .gcode",
+    "author": "Karol Kováč",
+    "version": (2, 0),
+    "blender": (3, 6, 1),
+    "location": "View > Sidebar (press 'N') > COM",
+    "doc_url": "https://github.com/kovkar/PV160/wiki",
+    "support": "COMMUNITY",
+    "category": "3D View",
 }
 
 classes = [

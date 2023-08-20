@@ -10,7 +10,7 @@ from .functions import toggle_printer_frame, update_frame, update_offset
 class PrinterProperties(PropertyGroup):
     printer_size: IntVectorProperty(name="Printer dimensions [mm]",
                                     description="Dimensions of printer G-code was created for"
-                                                "(needed for COM conversion to blenders coordinate system).",
+                                                "(needed for COM conversion to blender coordinate system).",
                                     update=update_frame,
                                     default=(200, 200, 200),
                                     subtype="XYZ_LENGTH",
