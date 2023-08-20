@@ -22,15 +22,11 @@ class PrintsPanel(Panel):
         stl_box.prop(props, "print_offset")
         stl_box.operator('com.spawn', text="Spawn .stl")
 
-        path_box = layout.box()
-        path_box.label(text="Path to .gcode file:")
-        path_box.prop(props, "gcode_path")
-
-        dimension_box = layout.box()
-        dimension_box.prop(props, "printer_size")
-        dimension_box.prop(props, "show_printer_frame")
-
-        row = layout.row()
-        row.operator('com.gcode', text='Calculate')
+        gcode_box = layout.box()
+        gcode_box.label(text="Path to .gcode file:")
+        gcode_box.prop(props, "gcode_path")
+        gcode_box.prop(props, "printer_size")
+        gcode_box.prop(props, "show_printer_frame")
+        gcode_box.operator('com.gcode', text='Calculate')
 
 
