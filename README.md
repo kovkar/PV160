@@ -31,6 +31,9 @@ The __center of mass__ will be __displayed__ in the viewport __by 3D cursor__ (e
 
 - printer size (x,y mnax. coord) needed for conversion to blender's coordinate system, entering incorect values will affect results.
 - if your model is not in .stl format simply import it through blender and place into frame (scene) yourself.
+
+## Results
+![PrintCom Banner](data/results.png)
   
 ## License
 
