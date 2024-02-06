@@ -10,7 +10,7 @@ Blender add-on for visualizing the center of mass of 3D prints (.gcode files).
 
 ## Installation
 
-1. Download printcom addon as .zip file.
+1. Download printcom addon .zip file from release.
 2. Open Blender and go to Preferences > Add-ons.
 3. Click on "Install" and select the downloaded ZIP file.
 4. Enable the "[printcom] 3D prints CoM visualization" addon.
